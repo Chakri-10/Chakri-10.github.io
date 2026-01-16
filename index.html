@@ -4,221 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chakradhara Pemmasani</title>
-
-  <!-- Minimal, modern CSS (no frameworks) -->
-  <style>
-    /* ---------- CSS RESET ---------- */
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: #0f172a; /* slate-900 */
-      background: #ffffff;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* ---------- VARIABLES ---------- */
-    :root {
-      --max-width: 1100px;
-      --accent: #2563eb; /* blue-600 */
-      --muted: #64748b;  /* slate-500 */
-      --border: #e5e7eb; /* gray-200 */
-      --bg-soft: #f8fafc; /* slate-50 */
-    }
-
-    /* ---------- LAYOUT ---------- */
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      z-index: 100;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-
-    .logo {
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.25rem;
-      font-size: 0.95rem;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-    }
-
-    /* ---------- HERO ---------- */
-    .hero {
-      padding: 5rem 0 4rem;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3rem;
-      align-items: center;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      color: var(--muted);
-      max-width: 52ch;
-      margin-bottom: 1.75rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.6rem 1.1rem;
-      border-radius: 0.5rem;
-      font-size: 0.95rem;
-      border: 1px solid var(--border);
-      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
-    }
-
-    .btn.primary {
-      background: var(--accent);
-      color: #ffffff;
-      border-color: var(--accent);
-    }
-
-    .btn.primary:hover {
-      background: #1d4ed8; /* blue-700 */
-    }
-
-    .btn.secondary:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    .hero-card {
-      background: var(--bg-soft);
-      border: 1px solid var(--border);
-      border-radius: 0.75rem;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    /* ---------- SECTIONS ---------- */
-    section {
-      padding: 4rem 0;
-    }
-
-    section h2 {
-      font-size: 1.5rem;
-      letter-spacing: -0.02em;
-      margin-bottom: 1.5rem;
-    }
-
-    /* ---------- PROJECTS ---------- */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .card {
-      border: 1px solid var(--border);
-      border-radius: 0.75rem;
-      padding: 1.25rem;
-      background: #ffffff;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    }
-
-    .card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 2rem 0;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 768px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links {
-        gap: 0.75rem;
-        font-size: 0.9rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+
   <!-- HEADER -->
   <header>
     <div class="container nav">
@@ -235,7 +24,10 @@
   <main class="container hero">
     <div class="hero-grid">
       <div>
-        <h1>Electrical Engineering Student<br />Focused on Computing Systems</h1>
+        <h1>
+          Electrical Engineering Student<br />
+          Focused on Computing Systems
+        </h1>
         <p>
           I’m a third-year EE student interested in computer architecture,
           VLSI, and high-performance computing. I enjoy building clean,
@@ -247,10 +39,10 @@
         </div>
       </div>
       <div class="hero-card">
-        <strong>Currently:</strong><br />
-        • Undergraduate researcher<br />
-        • Seeking Summer 2025 internships<br />
-        • Interested in microelectronics & semiconductors
+        <strong>Currently</strong><br />
+        Undergraduate researcher<br />
+        Seeking Summer 2025 internships<br />
+        Interested in microelectronics & semiconductors
       </div>
     </div>
   </main>
@@ -258,7 +50,7 @@
   <!-- ABOUT -->
   <section id="about" class="container">
     <h2>About</h2>
-    <p style="max-width: 65ch; color: var(--muted);">
+    <p class="section-text">
       My interests lie at the intersection of hardware and computation.
       I enjoy working on projects that involve low-level design,
       performance optimization, and system-level thinking.
@@ -272,8 +64,8 @@
       <div class="card">
         <h3>8-bit CMOS Datapath</h3>
         <p>
-          Designed and characterized a CMOS datapath as part of an ECE design
-          project, focusing on timing, area, and power tradeoffs.
+          Designed and characterized a CMOS datapath focusing on timing,
+          area, and power tradeoffs.
         </p>
       </div>
       <div class="card">
@@ -296,22 +88,18 @@
   <!-- CONTACT -->
   <section id="contact" class="container">
     <h2>Contact</h2>
-    <p style="color: var(--muted);">
-      Email: <a href="mailto:yourname@email.com" style="color: var(--accent);">yourname@email.com</a><br />
-      GitHub / LinkedIn links can go here.
+    <p class="section-text">
+      Email: <a href="mailto:yourname@email.com">yourname@email.com</a><br />
+      GitHub and LinkedIn links can go here.
     </p>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      © <span id="year"></span> Chakradhara Pemmasani
+      © 2026 Chakradhara Pemmasani
     </div>
   </footer>
 
-  <!-- Tiny inline JS only for year (optional, remove if you want pure HTML) -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
